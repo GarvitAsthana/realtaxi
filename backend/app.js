@@ -18,17 +18,18 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 
-app.get('/' , (req , res) => {
-    res.send("hello");
+
+app.get('/', (req, res) => {
+    res.send('Hello World');
 });
 
-
 app.use('/users', userRoutes);
-
 app.use('/captains', captainRoutes);
-
 app.use('/maps', mapsRoutes);
-
 app.use('/rides', rideRoutes);
 
+
+
+
 module.exports = app;
+
